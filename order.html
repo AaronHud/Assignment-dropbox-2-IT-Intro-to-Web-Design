@@ -1,0 +1,186 @@
+<!--
+===========================================
+            Hudson: Assign 2
+        Order Page (order.html)
+            Due: Feb 22
+===========================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hudson: Assign 2</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="park.css">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">Universal Point</a>
+
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rides.html">Rides</a></li>
+                    <li class="nav-item"><a class="nav-link" href="info.html">Info</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="order.html">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#upcoming-events">Upcoming Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#related-news">Related News</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="text-center mt-3">
+            <img src="images/logo.png" alt="Universal Point Logo" class="logo-img">
+            <h1>Universal Studios' Premier Movie Adventure Park</h1>
+        </header>
+
+        <main class="container">
+            <hr>
+            <h2>Order Tickets</h2>
+
+            <form action="formProcessor.html" method="get">
+
+                <fieldset class="p-2 mb-3">
+                    <legend>Contact Information</legend>
+                    <div class="form-inline flex-wrap">
+                        <label for="fullName" class="mr-2 mb-2">Name:</label>
+                        <input type="text" id="fullName" name="fullName" class="mr-4 mb-2">
+
+                        <label for="emailAddress" class="mr-2 mb-2">E-Mail Address:</label>
+                        <input type="email" id="emailAddress" name="emailAddress" class="mr-4 mb-2">
+
+                        <label for="phoneNumber" class="mr-2 mb-2">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" class="mr-4 mb-2">
+
+                        <label for="age" class="mr-2 mb-2">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="100" class="mb-2">
+                    </div>
+                </fieldset>
+
+                <fieldset class="p-2 mb-3">
+                    <legend>Ticket Information</legend>
+
+                    <p class="mb-2">
+                        <label for="ticketCount" class="mr-2">Number of Tickets?</label>
+                        <select id="ticketCount" name="ticketCount">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </p>
+
+                    <p class="mb-2">
+                        <label for="donation" class="mr-2">How much do you want to donate to the park?</label>
+                        1
+                        <input type="range" id="donation" name="donation" min="1" max="100" step="3">
+                        100
+                    </p>
+
+                    <p class="mb-1">Would you like to add any of the following passes to your ticket(s)?</p>
+
+                    <div class="form-inline flex-wrap">
+                        <div class="mr-4 mb-2">
+                            <input type="checkbox" id="mealPass" name="addOns" value="meal_pass">
+                            <label for="mealPass" class="ml-1">Meal Pass</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="checkbox" id="fastPass" name="addOns" value="fast_pass" checked>
+                            <label for="fastPass" class="ml-1">Fast Pass</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="checkbox" id="parkingPass" name="addOns" value="parking_pass" checked>
+                            <label for="parkingPass" class="ml-1">Parking Pass</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="checkbox" id="behindScenesPass" name="addOns" value="behind_scenes_pass">
+                            <label for="behindScenesPass" class="ml-1">Behind-the-Scenes Pass</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="p-2 mb-3">
+                    <legend>Delivery Information</legend>
+
+                    <p class="mb-2">
+                        <label for="deliveryDate" class="mr-2">Delivery Date:</label>
+                        <input type="date" id="deliveryDate" name="deliveryDate">
+                    </p>
+
+                    <p class="mb-1">How would you like to receive your tickets?</p>
+                    <div class="form-inline flex-wrap">
+                        <div class="mr-4 mb-2">
+                            <input type="radio" id="deliverEmail" name="deliveryMethod" value="email">
+                            <label for="deliverEmail" class="ml-1">Email</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="radio" id="deliverMail" name="deliveryMethod" value="mail">
+                            <label for="deliverMail" class="ml-1">Mail</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="radio" id="deliverDigital" name="deliveryMethod" value="digital_download">
+                            <label for="deliverDigital" class="ml-1">Digital Download</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="radio" id="deliverDrone" name="deliveryMethod" value="drone">
+                            <label for="deliverDrone" class="ml-1">Drone</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="radio" id="deliverTelegram" name="deliveryMethod" value="singing_telegram">
+                            <label for="deliverTelegram" class="ml-1">Singing Telegram</label>
+                        </div>
+
+                        <div class="mr-4 mb-2">
+                            <input type="radio" id="deliverPigeon" name="deliveryMethod" value="carrier_pigeon">
+                            <label for="deliverPigeon" class="ml-1">Carrier Pigeon</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <input type="submit" value="Order Ticket!">
+
+            </form>
+        </main>
+
+        <footer class="text-center mt-4 mb-4">
+            <p class="small">
+                &copy; Spring 2026 -
+                <a href="mailto:ah52261@georgiasouthern.edu">ah52261@georgiasouthern.edu</a>
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
