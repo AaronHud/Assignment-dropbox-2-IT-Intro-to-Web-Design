@@ -1,8 +1,8 @@
 <!--
 ===========================================
-            Hudson: Assign 3
+            Hudson: Assign 4
             Info Page (info.html)
-              Due: Apr. 11
+              Due: May. 4
 ===========================================
 -->
 
@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hudson: Assign 3</title>
+    <title>Hudson: Assign 4</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="park.css">
@@ -36,7 +36,7 @@
 
         <!-- HEADER -->
         <header class="text-center mt-3">
-            <img src="../images/logo.png" alt="Universal Point Logo" class="logo-img">
+            <img src="logo.png" alt="Universal Point Logo" class="logo-img">
             <h1>Universal Studios' Premier Movie Adventure Park</h1>
         </header>
 
@@ -48,7 +48,10 @@
             <h2>Ride Information</h2>
 
             <table class="info-table">
-                <caption>* All rides close 10 minutes before the park closes</caption>
+
+                <caption>
+                    * All rides close 10 minutes before the park closes
+                </caption>
 
                 <tr>
                     <th>Ride</th>
@@ -58,39 +61,50 @@
                 </tr>
 
                 <tr>
-                    <td>The Incredible Hulk Coaster</td>
+                    <td onclick="rideInfo('HULK','The Incredible Hulk Coaster')">
+                        The Incredible Hulk Coaster
+                    </td>
                     <td>54 inches</td>
                     <td>2 min</td>
                     <td>1999</td>
                 </tr>
 
                 <tr>
-                    <td>KrustyLand</td>
+                    <td onclick="rideInfo('KRUSTY','KrustyLand')">
+                        KrustyLand
+                    </td>
                     <td>40 inches</td>
                     <td>5 min</td>
                     <td>2008</td>
                 </tr>
 
                 <tr>
-                    <td>VelociCoaster</td>
+                    <td onclick="rideInfo('VELOCI','VelociCoaster')">
+                        VelociCoaster
+                    </td>
                     <td>51 inches</td>
                     <td>2 min</td>
                     <td>2021</td>
                 </tr>
 
                 <tr>
-                    <td>Transformers Ride</td>
+                    <td onclick="rideInfo('TRANS','Transformers Ride')">
+                        Transformers Ride
+                    </td>
                     <td>40 inches</td>
                     <td>4 min</td>
                     <td>2012</td>
                 </tr>
 
                 <tr>
-                    <td>Rip Ride Rockit</td>
+                    <td onclick="rideInfo('RIP','Rip Ride Rockit')">
+                        Rip Ride Rockit
+                    </td>
                     <td>51 inches</td>
                     <td>2 min</td>
                     <td>2009</td>
                 </tr>
+
             </table>
 
             <hr>
@@ -100,12 +114,17 @@
         <!-- FOOTER -->
         <footer class="text-center mt-4 mb-4">
             <p>
-                Copyright &copy; Spring 2026 - Due: Apr. 11 -
-                <a href="mailto:ah52261@georgiasouthern.edu">ah52261@georgiasouthern.edu</a>
+                Copyright &copy; Spring 2026 - Due: May. 4 -
+                <a href="mailto:ah52261@georgiasouthern.edu">
+                    ah52261@georgiasouthern.edu
+                </a>
             </p>
         </footer>
 
     </div>
+
+    <!-- ASSIGNMENT 4 JAVASCRIPT -->
+    <script src="amuse_script.js"></script>
 
 </body>
 
