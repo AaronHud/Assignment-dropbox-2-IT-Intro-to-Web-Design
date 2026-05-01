@@ -1,8 +1,8 @@
 <!--
 ===========================================
-            Hudson: Assign 3
+            Hudson: Assign 4
             Rides Page (rides.html)
-              Due: Apr. 11
+              Due: May. 4
 ===========================================
 -->
 
@@ -12,14 +12,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hudson: Assign 3</title>
+    <title>Hudson: Assign 4</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="park.css">
     <link rel="stylesheet" href="amuse_styles.css">
 </head>
 
-<body>
+<body onload="showRides()">
 
     <div id="wrapper">
 
@@ -36,7 +36,7 @@
 
         <!-- HEADER -->
         <header class="text-center mt-3">
-            <img src="../images/logo.png" alt="Universal Point Logo" class="logo-img">
+            <img src="logo.png" alt="Universal Point Logo" class="logo-img">
             <h1>Universal Studios' Premier Movie Adventure Park</h1>
         </header>
 
@@ -48,60 +48,8 @@
             <h2>Park Rides &amp; Attractions</h2>
             <p>Explore exciting rides below.</p>
 
-            <hr>
-            <div class="ride-block">
-                <img src="../images/universal-entrance.jpg" alt="The Incredible Hulk Coaster area" class="ride-img">
-                <h3>The Incredible Hulk Coaster</h3>
-                <p>
-                    The Incredible Hulk Coaster is a gamma radiation themed coaster famously
-                    known for shooting riders from 0 to 40 mph in 2 seconds uphill into a
-                    zero-g roll. It reaches speeds of 67 mph.
-                </p>
-            </div>
-            <hr>
-
-            <div class="ride-block">
-                <img src="../images/universal-ride-view.jpg" alt="KrustyLand themed ride area" class="ride-img">
-                <h3>KrustyLand</h3>
-                <p>
-                    KrustyLand is a themed area centered around motion simulation.
-                    Experience the Simpson family through chaotic attractions in 4D.
-                </p>
-            </div>
-
-            <hr>
-
-            <div class="ride-block">
-                <img src="../images/velocicoaster.jpg" alt="VelociCoaster ride track" class="ride-img">
-                <h3>VelociCoaster</h3>
-                <p>
-                    The VelociCoaster is a high-speed intense ride reaching speeds of
-                    70 mph in 2.4 seconds. It is the tallest and fastest launch coaster in Florida.
-                </p>
-            </div>
-
-            <hr>
-
-            <div class="ride-block">
-                <img src="../images/transformers-ride.jpg" alt="Transformers ride building" class="ride-img">
-                <h3>Transformers Ride</h3>
-                <p>
-                    The Transformers come to life in this 4D motion simulator that puts
-                    you inside a battle between Autobots and Decepticons.
-                </p>
-            </div>
-
-            <hr>
-
-            <div class="ride-block">
-                <img src="../images/rip-ride-rockit.jpg" alt="Rip Ride Rockit coaster" class="ride-img">
-                <h3>Rip Ride Rockit</h3>
-                <p>
-                    This is a 167-foot tall, music-themed steel coaster reaching 65 mph.
-                    It also features a unique 90-degree lift hill and onboard audio that
-                    lets a user pick their own music.
-                </p>
-            </div>
+            <!-- JavaScript writes rides here -->
+            <div id="rideOutput"></div>
 
             <hr>
 
@@ -110,12 +58,17 @@
         <!-- FOOTER -->
         <footer class="text-center mt-4 mb-4">
             <p>
-                Copyright &copy; Spring 2026 - Due: Apr. 11 -
-                <a href="mailto:ah52261@georgiasouthern.edu">ah52261@georgiasouthern.edu</a>
+                Copyright &copy; Spring 2026 - Due: May. 4 -
+                <a href="mailto:ah52261@georgiasouthern.edu">
+                    ah52261@georgiasouthern.edu
+                </a>
             </p>
         </footer>
 
     </div>
+
+    <!-- ASSIGNMENT 4 JAVASCRIPT -->
+    <script src="amuse_script.js"></script>
 
 </body>
 
